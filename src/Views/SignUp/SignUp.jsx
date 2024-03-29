@@ -3,16 +3,14 @@ import { Box, Button, Stack, Typography, TextField } from '@mui/material';
 import mobileImage from '../../utills/images/mobile.png';
 import { useSnackbar } from 'notistack';
 import { NavLink, useNavigate } from 'react-router-dom';
-import {} from 'react-redux';
 import { loadUser } from '../../reducers/userReducers';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 const SignUp = () => {
   const [data, setData] = useState({
     username: '',
     password: '',
   });
   const dispatch = useDispatch();
-  const selector = useSelector((state) => state);
   const { enqueueSnackbar } = useSnackbar();
   const navigate = useNavigate();
   const submitData = () => {

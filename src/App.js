@@ -1,5 +1,4 @@
 import './App.css';
-import { Box } from '@mui/material';
 import { customerData,loadUser } from './reducers/userReducers';
 import { useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
@@ -19,7 +18,7 @@ function App() {
         dispatch(loadUser(users));
       }
     })();
-  }, []);
+  });
   return (
     <SnackbarProvider maxSnack={3}>
       <Outlet />
